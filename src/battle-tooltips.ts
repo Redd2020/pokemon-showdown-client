@@ -1112,6 +1112,9 @@ class BattleTooltips {
 				if (ability === 'desertdash' && (weather === 'sunnyday' || weather === 'sandstorm')) {
 					speedModifiers.push(2);
 				}
+				if (ability === 'desertdash' && (weather === 'raindance' || weather === 'primordialsea')) {
+					speedModifiers.push(0.5);
+				}
 			}
 		}
 		if (ability === 'defeatist' && serverPokemon.hp <= serverPokemon.maxhp / 2) {
