@@ -2317,7 +2317,7 @@ class BattleStatGuesser {
 		} else if (abilityid === 'unburden' || abilityid === 'speedboost' || abilityid === 'motordrive') {
 			isFast = true;
 			moveCount['Ultrafast'] = 1;
-		} else if (abilityid === 'chlorophyll' || abilityid === 'swiftswim' || abilityid === 'sandrush') {
+		} else if (abilityid === 'chlorophyll' || abilityid === 'swiftswim' || abilityid === 'sandrush' || abilityid === 'desertdash') {
 			isFast = true;
 			moveCount['Ultrafast'] = 2;
 		} else if (itemid === 'salacberry') {
