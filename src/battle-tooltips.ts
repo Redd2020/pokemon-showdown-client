@@ -1109,7 +1109,7 @@ class BattleTooltips {
 				if (ability === 'swiftswim' && (weather === 'raindance' || weather === 'primordialsea')) {
 					speedModifiers.push(2);
 				}
-				if (ability === 'desertdash' && (weather === 'sunnyday' || weather === 'sandstorm')) {
+				if (ability === 'desertdash' && (weather === 'sunnyday' || weather === 'desolateland' || weather === 'sandstorm')) {
 					speedModifiers.push(2);
 				}
 				if (ability === 'desertdash' && (weather === 'raindance' || weather === 'primordialsea')) {
