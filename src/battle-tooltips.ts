@@ -1121,6 +1121,10 @@ class BattleTooltips {
 				if (ability === 'duckduckdance' && (weather === 'sunnyday' || weather === 'desolateland' || weather === 'raindance' || weather === 'primordialsea')) {
 					speedModifiers.push(2);
 				}
+				if (ability === 'duckduckdance' && (weather === 'hail')) {
+					stats.atk = Math.floor(stats.atk * 0.5);
+					stats.spa = Math.floor(stats.spa * 0.5);
+				}
 			}
 		}
 		if (ability === 'defeatist' && serverPokemon.hp <= serverPokemon.maxhp / 2) {
