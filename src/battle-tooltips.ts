@@ -1118,6 +1118,9 @@ class BattleTooltips {
 				if (ability === 'desertdash' && (weather === 'raindance' || weather === 'primordialsea')) {
 					speedModifiers.push(0.5);
 				}
+				if (ability === 'duckduckdance' && (weather === 'sunnyday' || weather === 'desolateland' || weather === 'raindance' || weather === 'primordialsea')) {
+					speedModifiers.push(2);
+				}
 			}
 		}
 		if (ability === 'defeatist' && serverPokemon.hp <= serverPokemon.maxhp / 2) {
@@ -2325,7 +2328,7 @@ class BattleStatGuesser {
 		} else if (abilityid === 'unburden' || abilityid === 'speedboost' || abilityid === 'motordrive') {
 			isFast = true;
 			moveCount['Ultrafast'] = 1;
-		} else if (abilityid === 'chlorophyll' || abilityid === 'swiftswim' || abilityid === 'sandrush' || abilityid === 'desertdash') {
+		} else if (abilityid === 'chlorophyll' || abilityid === 'swiftswim' || abilityid === 'sandrush' || abilityid === 'desertdash' || abilityid === 'duckduckdance') {
 			isFast = true;
 			moveCount['Ultrafast'] = 2;
 		} else if (itemid === 'salacberry') {
