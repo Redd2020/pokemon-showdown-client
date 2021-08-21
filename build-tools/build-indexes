@@ -97,6 +97,14 @@ function requireNoCache(pathSpec) {
 			index.push('alolan' + toID(name.slice(0, -6)) + ' ' + type + ' ' + id + ' 0');
 			return;
 		}
+		if (name.endsWith('-Ethereal')) {
+			index.push('ethereal' + toID(name.slice(0, -6)) + ' ' + type + ' ' + id + ' 0');
+			return;
+		}
+		if (name.endsWith('-Akuurian')) {
+			index.push('Akuurian' + toID(name.slice(0, -6)) + ' ' + type + ' ' + id + ' 0');
+			return;
+		}
 		let oldI = i;
 		if (name === 'Alakazam') i = 5;
 		if (name === 'Arctovish') i = 5;
