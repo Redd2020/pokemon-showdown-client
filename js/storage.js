@@ -214,7 +214,7 @@ if (!Storage.bg.id) {
 // localStorage is banned, and since prefs are cached in other
 // places in certain cases.
 
-Storage.origin = 'http://ethereal-skies-server.herokuapp.com-80.psim.us/' + Config.routes.client;
+Storage.origin = 'https://' + Config.routes.client;
 
 Storage.prefs = function (prop, value, save) {
 	if (value === undefined) {
