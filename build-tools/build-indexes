@@ -89,8 +89,9 @@ function requireNoCache(pathSpec) {
 			return;
 		}
 		if (name.endsWith('-Ethereal-Mega')) {
-			index.push('mega' + toID(name.slice(0, -5)) + ' ' + type + ' ' + id + ' 0');
-			index.push('m' + toID(name.slice(0, -5)) + ' ' + type + ' ' + id + ' 0');
+			index.push('mega' + toID(name.slice(0, -7) + name.slice(-1)) + ' ' + type + ' ' + id + ' 0');
+			index.push('m' + toID(name.slice(0, -7) + name.slice(-1)) + ' ' + type + ' ' + id + ' 0');
+			index.push('mega' + toID(name.slice(-1)) + ' ' + type + ' ' + id + ' ' + toID(name.slice(0, -7)).length);
 			return;
 		}
 		if (name.endsWith('-Mega')) {
