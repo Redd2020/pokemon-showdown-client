@@ -88,15 +88,12 @@ function requireNoCache(pathSpec) {
 			index.push('mega' + toID(name.slice(-1)) + ' ' + type + ' ' + id + ' ' + toID(name.slice(0, -7)).length);
 			return;
 		}
-		function generateAlias(id, name, type) {
-			let i = name.lastIndexOf(' ');
-			if (i < 0) i = name.lastIndexOf('-');
-			if (name.endsWith('-Ethereal-Mega') {
+		if (name.endsWith('-Ethereal-Mega')) {
 				index.push('mega' + toID(name.slice(0, -7) + name.slice(-1)) + ' ' + type + ' ' + id + ' 0');
 				index.push('m' + toID(name.slice(0, -7) + name.slice(-1)) + ' ' + type + ' ' + id + ' 0');
 				index.push('mega' + toID(name.slice(-1)) + ' ' + type + ' ' + id + ' ' + toID(name.slice(0, -7)).length);
 				return;
-			}
+		}
 		if (name.endsWith('-Mega')) {
 			index.push('mega' + toID(name.slice(0, -5)) + ' ' + type + ' ' + id + ' 0');
 			index.push('m' + toID(name.slice(0, -5)) + ' ' + type + ' ' + id + ' 0');
