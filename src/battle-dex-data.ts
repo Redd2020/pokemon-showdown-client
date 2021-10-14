@@ -1082,6 +1082,7 @@ interface MoveFlags {
 	/** Power is multiplied by 1.2 when used by a Pokemon with the Iron Fist Ability. */
 	punch?: 1 | 0;
 	kick?: 1 | 0;
+	slice?: 1 | 0;
 	/** If this move is successful, the user must recharge on the following turn and cannot make a move. */
 	recharge?: 1 | 0;
 	/** Bounced back to the original user by Magic Coat or the Magic Bounce Ability. */

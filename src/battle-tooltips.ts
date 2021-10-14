@@ -731,7 +731,10 @@ class BattleTooltips {
 				text += `<p class="movetag">&#x2713; Fist <small>(boosted by Iron Fist)</small></p>`;
 			}
 			if (move.flags.kick && ability === 'heavyhooves') {
-				text += `<p class="movetag">&#x2713; Fist <small>(boosted by Heavy Hooves)</small></p>`;
+				text += `<p class="movetag">&#x2713; Kick <small>(boosted by Heavy Hooves)</small></p>`;
+			}
+			if (move.flags.slice && ability === 'razorsharp') {
+				text += `<p class="movetag">&#x2713; Slice <small>(boosted by Razor Sharp)</small></p>`;
 			}
 			if (move.flags.pulse && ability === 'megalauncher') {
 				text += `<p class="movetag">&#x2713; Pulse <small>(boosted by Mega Launcher)</small></p>`;
@@ -1796,6 +1799,9 @@ class BattleTooltips {
 		}
 		if (move.flags['kick']) {
 			value.abilityModify(1.2, 'Heavy Hooves');
+		}
+		if (move.flags['slice']) {
+			value.abilityModify(1.2, 'Razor Sharp');
 		}
 		if (move.recoil || move.hasCrashDamage) {
 			value.abilityModify(1.2, 'Reckless');
