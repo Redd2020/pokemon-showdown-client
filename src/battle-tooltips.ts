@@ -1422,11 +1422,11 @@ class BattleTooltips {
 			}
 			if (value.abilityModify(0, 'Normalize')) moveType = 'Normal';
 		}
-		if (allowTypeOverride) {
-			if (move.id === 'Explosion') {
-				if (value.abilityModify(0, 'Supernova')) moveType = 'Fire';
-			}
-		}
+		//if (allowTypeOverride) {
+			//if (move.id === 'Explosion') {
+				//if (value.abilityModify(0, 'Supernova')) moveType = 'Fire';
+			//}
+		//}
 		// There aren't any max moves with the sound flag, but if there were, Liquid Voice would make them water type
 		const isSound = !!(
 			forMaxMove ?
