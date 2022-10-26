@@ -1421,6 +1421,9 @@ class BattleTooltips {
 				if (value.abilityModify(0, 'Refrigerate')) moveType = 'Ice';
 			}
 			if (value.abilityModify(0, 'Normalize')) moveType = 'Normal';
+			if (move.flags['explode']) {
+				if (value.abilityModify(0, 'Aerilate')) moveType = 'Fire';
+			}
 		}
 		if (allowTypeOverride && category !== 'Status' && !move.isZ && !move.id.startsWith('hiddenpower')) {
 			if (move.id === 'Explosion') {
