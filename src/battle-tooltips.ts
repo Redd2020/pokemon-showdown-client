@@ -1423,7 +1423,7 @@ class BattleTooltips {
 			if (value.abilityModify(0, 'Normalize')) moveType = 'Normal';
 		}
 		if (allowTypeOverride) {
-			if (move.flags['bullet']) {
+			if (move.flags['explode']) {
 				if (value.abilityModify(0, 'Supernova')) moveType = 'Fire';
 			}
 		}
