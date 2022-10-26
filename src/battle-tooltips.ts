@@ -1422,7 +1422,7 @@ class BattleTooltips {
 			}
 			if (value.abilityModify(0, 'Normalize')) moveType = 'Normal';
 		}
-		if (allowTypeOverride) {
+		if (allowTypeOverride && category !== 'Status' && !move.isZ && !move.id.startsWith('hiddenpower')) {
 			if (move.flags['explode']) {
 				if (value.abilityModify(0, 'Supernova')) moveType = 'Fire';
 			}
@@ -1794,6 +1794,7 @@ class BattleTooltips {
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Pixilate");
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Miasma");
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Refrigerate");
+				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Supernova");
 			}
 			if (this.battle.gen > 6) {
 				value.abilityModify(1.2, "Normalize");
