@@ -1411,6 +1411,10 @@ class BattleTooltips {
 			'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'struggle', 'technoblast', 'terrainpulse', 'weatherball',
 		];
 		const allowTypeOverride = !noTypeOverride.includes(move.id);
+		
+		if (allowTypeOverride && move.id === 'Explosion' && value.abilityModify(0, 'Supernova')) {
+			moveType = 'Fire';
+		}
 
 		if (allowTypeOverride && category !== 'Status' && !move.isZ && !move.id.startsWith('hiddenpower')) {
 			if (moveType === 'Normal') {
@@ -1421,9 +1425,6 @@ class BattleTooltips {
 				if (value.abilityModify(0, 'Refrigerate')) moveType = 'Ice';
 			}
 			if (value.abilityModify(0, 'Normalize')) moveType = 'Normal';
-		}
-		if (allowTypeOverride && move.flags['explode'] && value.abilityModify(0, 'Supernova')) {
-			moveType = 'Fire';
 		}
 		// There aren't any max moves with the sound flag, but if there were, Liquid Voice would make them water type
 		const isSound = !!(
