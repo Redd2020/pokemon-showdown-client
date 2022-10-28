@@ -1412,7 +1412,9 @@ class BattleTooltips {
 		];
 		const allowTypeOverride = !noTypeOverride.includes(move.id);
 		
-		if (allowTypeOverride && move.id !== 'explosion' && value.abilityModify(0, 'Supernova')) moveType = 'Fire';
+		if (allowTypeOverride && move.id === 'explosion' && !move.isZ) {
+            if (value.abilityModify(0, 'Supernova') && moveType !== 'Fire') moveType = 'Fire';
+        }
 
 		if (allowTypeOverride && category !== 'Status' && !move.isZ && !move.id.startsWith('hiddenpower')) {
 			if (moveType === 'Normal') {
