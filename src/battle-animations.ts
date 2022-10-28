@@ -6052,5 +6052,10 @@ export const BattleStatusAnims: AnimTable = {
 			}, 'swing');
 		},
 	},
+	supernova: {
+		anim(){
+			
+		}
+	}
 };
 BattleStatusAnims['focuspunch'] = {anim: BattleStatusAnims['flinch'].anim};
