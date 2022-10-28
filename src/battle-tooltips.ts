@@ -733,6 +733,9 @@ class BattleTooltips {
 			if (move.flags.kick && ability === 'heavyhooves') {
 				text += `<p class="movetag">&#x2713; Kick <small>(boosted by Heavy Hooves)</small></p>`;
 			}
+			if (move.flags.explode && ability === 'supernova') {
+				text += `<p class="movetag">&#x2713; Explode <small>(tye altered by Supernova)</small></p>`;
+			}
 			if (move.flags.slice && ability === 'razorsharp') {
 				text += `<p class="movetag">&#x2713; Slice <small>(boosted by Razor Sharp)</small></p>`;
 			}
@@ -1413,7 +1416,7 @@ class BattleTooltips {
 		const allowTypeOverride = !noTypeOverride.includes(move.id);
 		
 		if (allowTypeOverride && move.id === 'explosion' && !move.isZ) {
-            if (value.abilityModify(0, 'Supernova')) moveType = 'Fire';
+            if (value.abilityModify(0, 'Supernova') && moveType !== 'Fire') moveType = 'Fire';
         }
 
 		if (allowTypeOverride && category !== 'Status' && !move.isZ && !move.id.startsWith('hiddenpower')) {
